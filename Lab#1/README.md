@@ -45,9 +45,40 @@ For this laboratory work, I created 4 Builders (JellyBeansBuilder.java, Lollipop
 ```
 ### Abstract Factory
 
+```
+public interface AbstractFactory {
+    Candy sellCandy(String name);
+}
+```
 
-
+### Singleton
+```
+    public static JellyBellyFactory getJellyBellyFactory() {
+        if (jellyBellyFactory == null)
+            jellyBellyFactory = new JellyBellyFactory();
+        return jellyBellyFactory;
+    }
+```
+### Factory Method
+```
+switch (product) {
+            case "sour jelly":
+                SourJellyBuilder sourJellyBuilder = new SourJellyBuilder();
+                candySeller.makeHariboSourJelly(sourJellyBuilder);
+                return sourJellyBuilder.getProduct();
+                ...
+            case "mint":
+                MintBuilder mintBuilder = new MintBuilder();
+                candySeller.makeHariboMint(mintBuilder);
+                return mintBuilder.getProduct();
+                default:
+                    return  null;
+                  }
+```
 ## Results/Screenshots/Conclusions:
+Main Online Candy Store Screen:
 ![alt text](https://github.com/marina01p/SDTM-Labs/blob/main/Lab%231/Screeshots/screen_1.png)
+Searching for a product:
 ![alt text](https://github.com/marina01p/SDTM-Labs/blob/main/Lab%231/Screeshots/screen_2.png)
+Buying hte product:
 ![alt text](https://github.com/marina01p/SDTM-Labs/blob/main/Lab%231/Screeshots/screen_3.png)
