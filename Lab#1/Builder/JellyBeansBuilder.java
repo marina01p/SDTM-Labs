@@ -24,6 +24,7 @@ public class JellyBeansBuilder implements Creational_Design_Patterns.Builder.Can
         this.jellyBeans.setManufacturer(manufacturer);
     }
 
+    @Override
     public void setComposition(boolean sugarFree) {
         this.jellyBeans.setComposition(sugarFree);
     }

@@ -24,6 +24,7 @@ public class LollipopBuilder implements Creational_Design_Patterns.Builder.Candy
         this.lollipop.setManufacturer(manufacturer);
     }
 
+    @Override
     public void setComposition(boolean sugarFree) {
         this.lollipop.setComposition(sugarFree);
     }

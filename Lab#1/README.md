@@ -42,16 +42,9 @@ For this laboratory work, I created 4 Builders (JellyBeansBuilder.java, Lollipop
         this.mint.setProduct(productName);
     }
 
-    @Override
-    public void setManufacturer(String manufacturer) {
-        this.mint.setManufacturer(manufacturer);
-    }
-
-    @Override
-    public void setComposition(boolean sugarFree) {
-        this.mint.setComposition(sugarFree);
-    }
 ```
+### Abstract Factory
+
 
 
 ## Results/Screenshots/Conclusions:

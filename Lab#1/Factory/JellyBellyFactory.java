@@ -7,7 +7,7 @@ import Creational_Design_Patterns.CandySeller;
 public class JellyBellyFactory implements Creational_Design_Patterns.Factory.AbstractFactory {
 
     private static volatile JellyBellyFactory jellyBellyFactory;
-    private CandySeller director = new CandySeller();
+    private CandySeller candySeller = new CandySeller();
 
     public static JellyBellyFactory getJellyBellyFactory() {
         if (jellyBellyFactory == null)
@@ -23,19 +23,19 @@ public class JellyBellyFactory implements Creational_Design_Patterns.Factory.Abs
         switch (product) {
             case "sour jelly":
                 SourJellyBuilder sourJellyBuilder = new SourJellyBuilder();
-                director.makeJellyBellySourJelly(sourJellyBuilder);
+                candySeller.makeJellyBellySourJelly(sourJellyBuilder);
                 return sourJellyBuilder.getProduct();
             case "jelly beans":
                 JellyBeansBuilder jellyBeansBuilder = new JellyBeansBuilder();
-                director.makeJellyBellyJellyBeans(jellyBeansBuilder);
+                candySeller.makeJellyBellyJellyBeans(jellyBeansBuilder);
                 return jellyBeansBuilder.getProduct();
             case "lollipop":
                 LollipopBuilder lollipopBuilder = new LollipopBuilder();
-                director.makeJellyBellyLollipop(lollipopBuilder);
+                candySeller.makeJellyBellyLollipop(lollipopBuilder);
                 return lollipopBuilder.getProduct();
             case "mint":
                 MintBuilder mintBuilder = new MintBuilder();
-                director.makeJellyBellyMint(mintBuilder);
+                candySeller.makeJellyBellyMint(mintBuilder);
                 return mintBuilder.getProduct();
             default:
                 return null;

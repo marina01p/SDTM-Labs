@@ -24,6 +24,7 @@ public class MintBuilder implements Creational_Design_Patterns.Builder.CandyBuil
         this.mint.setManufacturer(manufacturer);
     }
 
+    @Override
     public void setComposition(boolean sugarFree) {
         this.mint.setComposition(sugarFree);
     }
