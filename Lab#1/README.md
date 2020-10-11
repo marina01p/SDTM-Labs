@@ -53,9 +53,20 @@ public interface AbstractFactory {
 
 ### Singleton
 The singleton pattern is a software design pattern that restricts the instantiation of a class to one "single" instance.
-In this code it is used to 
+In this code it is used from this code example:
 ```
-    public static JellyBellyFactory getJellyBellyFactory() {
+    private Singleton() {} 
+  
+    public static Singleton getInstance() 
+    { 
+        if (obj==null) 
+            obj = new Singleton(); 
+        return obj; 
+    } 
+```
+And adapted for my code:
+```
+    public static JellyBellyFactory getJellyBellyInstance() {
         if (jellyBellyFactory == null)
             jellyBellyFactory = new JellyBellyFactory();
         return jellyBellyFactory;

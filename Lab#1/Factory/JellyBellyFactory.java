@@ -6,7 +6,7 @@ import Creational_Design_Patterns.CandySeller;
 
 public class JellyBellyFactory implements Creational_Design_Patterns.Factory.AbstractFactory {
 
-    private static volatile JellyBellyFactory jellyBellyFactory;
+    private static JellyBellyFactory jellyBellyFactory;
     private CandySeller candySeller = new CandySeller();
 
     public static JellyBellyFactory getJellyBellyInstance() {
