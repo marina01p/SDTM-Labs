@@ -86,7 +86,7 @@ public class Main {
                         System.out.println("\n------ Hard Candy ------");
                         System.out.println("\n- J E L L Y   B E L L Y -");
                         System.out.println(jellyBellyFactory.sellCandy("lollipop").toString());
-                        System.out.println(jellyBellyFactory.sellCandy("mint").toString());
+                        System.out.println(jellyBellyFactory.sellCandy("lollipop").toString());
                         break;
                     default:
                         System.out.println("You entered an invalid factory.");
@@ -95,6 +95,59 @@ public class Main {
 
             default:
                 System.out.println("You entered an invalid product.");
+        }
+
+        BufferedReader purchaseLine = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("\nEnter the desired product and name of the factory (x, y): ");
+        String name2 = purchaseLine.readLine();
+
+        String n = "\nYour purchase:";
+        String m = "\nThank you for your purchase!";
+
+        switch (name2.toLowerCase().replace(",", "")) {
+            case "sour jelly haribo":
+                System.out.println(n);
+                System.out.println(hariboFactory.sellCandy("sour jelly").toString());
+                System.out.println(m);
+                break;
+            case "sour jelly jelly belly":
+                System.out.println(n);
+                System.out.println(jellyBellyFactory.sellCandy("sour jelly").toString());
+                System.out.println(m);
+                break;
+            case "jelly beans haribo":
+                System.out.println(n);
+                System.out.println(hariboFactory.sellCandy("jelly beans").toString());
+                System.out.println(m);
+                break;
+            case "jelly beans jelly belly":
+                System.out.println(n);
+                System.out.println(jellyBellyFactory.sellCandy("jelly beans").toString());
+                System.out.println(m);
+                break;
+            case "lollipop haribo":
+                System.out.println(n);
+                System.out.println(hariboFactory.sellCandy("lollipop").toString());
+                System.out.println(m);
+                break;
+            case "lollipop jelly belly":
+                System.out.println(n);
+                System.out.println(jellyBellyFactory.sellCandy("lollipop").toString());
+                System.out.println(m);
+                break;
+            case "mint haribo":
+                System.out.println(n);
+                System.out.println(hariboFactory.sellCandy("mint").toString());
+                System.out.println(m);
+                break;
+            case "mint jelly belly":
+                System.out.println(n);
+                System.out.println(jellyBellyFactory.sellCandy("mint").toString());
+                System.out.println(m);
+                break;
+            default:
+                System.out.println("Invalid product name.");
+
         }
     }
 }
