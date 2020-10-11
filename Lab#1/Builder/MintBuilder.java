@@ -1,8 +1,8 @@
-package Creational_Design_Patterns.Candy.Builder;
+package Creational_Design_Patterns.Builder;
 
 import Creational_Design_Patterns.Candy.Mint;
 
-public class MintBuilder implements Creational_Design_Patterns.Candy.Builder.CandyBuilder {
+public class MintBuilder implements Creational_Design_Patterns.Builder.CandyBuilder {
     private Mint mint;
 
     public MintBuilder() {

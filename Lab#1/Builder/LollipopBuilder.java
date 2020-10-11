@@ -1,8 +1,8 @@
-package Creational_Design_Patterns.Candy.Builder;
+package Creational_Design_Patterns.Builder;
 
 import Creational_Design_Patterns.Candy.Lollipop;
 
-public class LollipopBuilder implements Creational_Design_Patterns.Candy.Builder.CandyBuilder {
+public class LollipopBuilder implements Creational_Design_Patterns.Builder.CandyBuilder {
     private Lollipop lollipop;
 
     public LollipopBuilder() {

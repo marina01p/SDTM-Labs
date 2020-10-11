@@ -1,10 +1,8 @@
 package Creational_Design_Patterns.Factory;
 
-import Creational_Design_Patterns.Candy.Builder.*;
+import Creational_Design_Patterns.Builder.*;
 import Creational_Design_Patterns.Candy.Candy;
 import Creational_Design_Patterns.CandySeller;
-
-import java.util.ArrayList;
 
 public class JellyBellyFactory implements Creational_Design_Patterns.Factory.AbstractFactory {
 

@@ -1,4 +1,4 @@
-package Creational_Design_Patterns.Candy.Builder;
+package Creational_Design_Patterns.Builder;
 
 public interface CandyBuilder {
     void reset();
