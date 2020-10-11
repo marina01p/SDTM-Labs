@@ -88,7 +88,7 @@ Searching for a product:
 ![alt text](https://github.com/marina01p/SDTM-Labs/blob/main/Lab%231/Screeshots/screen_2.png)
 
 
-Buying hte product:
+Buying the product:
 
 
 ![alt text](https://github.com/marina01p/SDTM-Labs/blob/main/Lab%231/Screeshots/screen_3.png)
