@@ -48,3 +48,6 @@ For this laboratory work, I created 4 Builders (JellyBeansBuilder.java, Lollipop
 
 
 ## Results/Screenshots/Conclusions:
+![alt text](https://github.com/marina01p/SDTM-Labs/blob/main/Lab%231/Screeshots/screen_1.png)
+![alt text](https://github.com/marina01p/SDTM-Labs/blob/main/Lab%231/Screeshots/screen_2.png)
+![alt text](https://github.com/marina01p/SDTM-Labs/blob/main/Lab%231/Screeshots/screen_3.png)
