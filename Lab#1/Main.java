@@ -33,8 +33,8 @@ public class Main {
         System.out.println("Enter the desired factory : ");
         String name1 = factoryLine.readLine();
 
-        AbstractFactory hariboFactory = HariboFactory.getHariboFactory();
-        AbstractFactory jellyBellyFactory = JellyBellyFactory.getJellyBellyFactory();
+        AbstractFactory hariboFactory = HariboFactory.getHariboInstance();
+        AbstractFactory jellyBellyFactory = JellyBellyFactory.getJellyBellyInstance();
 
 
         switch (name.toLowerCase()) {

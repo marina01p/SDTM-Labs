@@ -11,7 +11,7 @@ public class HariboFactory implements Creational_Design_Patterns.Factory.Abstrac
 
     private HariboFactory() {}
 
-    public static HariboFactory getHariboFactory() {
+    public static HariboFactory getHariboInstance() {
         if (hariboFactory == null)
             hariboFactory = new HariboFactory();
         return hariboFactory;

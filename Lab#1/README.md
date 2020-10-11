@@ -44,7 +44,7 @@ For this laboratory work, I created 4 Builders (JellyBeansBuilder.java, Lollipop
 
 ```
 ### Abstract Factory
-
+The abstract factory pattern provides a way to encapsulate a group of individual factories that have a common theme without specifying their concrete classes.
 ```
 public interface AbstractFactory {
     Candy sellCandy(String name);
@@ -52,6 +52,8 @@ public interface AbstractFactory {
 ```
 
 ### Singleton
+The singleton pattern is a software design pattern that restricts the instantiation of a class to one "single" instance.
+In this code it is used to 
 ```
     public static JellyBellyFactory getJellyBellyFactory() {
         if (jellyBellyFactory == null)
@@ -60,6 +62,8 @@ public interface AbstractFactory {
     }
 ```
 ### Factory Method
+
+The factory method pattern uses factory methods to deal with the problem of creating objects without having to specify the exact class of the object that will be created.
 ```
 switch (product) {
             case "sour jelly":

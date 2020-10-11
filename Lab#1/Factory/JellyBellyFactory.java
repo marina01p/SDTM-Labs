@@ -9,7 +9,7 @@ public class JellyBellyFactory implements Creational_Design_Patterns.Factory.Abs
     private static volatile JellyBellyFactory jellyBellyFactory;
     private CandySeller candySeller = new CandySeller();
 
-    public static JellyBellyFactory getJellyBellyFactory() {
+    public static JellyBellyFactory getJellyBellyInstance() {
         if (jellyBellyFactory == null)
             jellyBellyFactory = new JellyBellyFactory();
         return jellyBellyFactory;
