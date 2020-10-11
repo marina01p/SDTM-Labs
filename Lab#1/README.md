@@ -1,6 +1,5 @@
 # Topic: *Creational Design Patterns*
 ## Author: *Petici Marina*
-------
 ## Task:
 
 1. Choose an OO programming language and a suitable IDE or Editor (No frameworks/libs/engines allowed);
