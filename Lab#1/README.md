@@ -45,6 +45,7 @@ For this laboratory work, I created 4 Builders (JellyBeansBuilder.java, Lollipop
 ```
 ### Abstract Factory
 The abstract factory pattern provides a way to encapsulate a group of individual factories that have a common theme without specifying their concrete classes.
+Since I have two factory design patterns (HariboFactory and JellyBellyFactory), with AbstractFactory.java code I encapsulaed both of them.
 ```
 public interface AbstractFactory {
     Candy sellCandy(String name);
@@ -66,6 +67,8 @@ In this code it is used from this code example:
 ```
 And adapted for my code:
 ```
+    private HariboFactory() {}
+
     public static JellyBellyFactory getJellyBellyInstance() {
         if (jellyBellyFactory == null)
             jellyBellyFactory = new JellyBellyFactory();
@@ -75,20 +78,16 @@ And adapted for my code:
 ### Factory Method
 
 The factory method pattern uses factory methods to deal with the problem of creating objects without having to specify the exact class of the object that will be created.
+In my project I created a factory to generate object of concrete classes based on given information by using if-else statements.
 ```
-switch (product) {
-            case "sour jelly":
-                SourJellyBuilder sourJellyBuilder = new SourJellyBuilder();
-                candySeller.makeHariboSourJelly(sourJellyBuilder);
-                return sourJellyBuilder.getProduct();
-                ...
-            case "mint":
-                MintBuilder mintBuilder = new MintBuilder();
-                candySeller.makeHariboMint(mintBuilder);
-                return mintBuilder.getProduct();
-                default:
-                    return  null;
-                  }
+if (product.equals("sour jelly")) {
+            SourJellyBuilder sourJellyBuilder = new SourJellyBuilder();
+            candySeller.makeHariboSourJelly(sourJellyBuilder);
+            return sourJellyBuilder.getProduct();
+        } else if (product.equals("jelly beans")) {
+            SourJellyBuilder sourJellyBuilder = new SourJellyBuilder();
+            candySeller.makeHariboSourJelly(sourJellyBuilder);
+            return sourJellyBuilder.getProduct();
 ```
 ## Results/Screenshots/Conclusions:
 Main Online Candy Store Screen:

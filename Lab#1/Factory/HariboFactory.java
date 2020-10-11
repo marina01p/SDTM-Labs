@@ -9,7 +9,8 @@ public class HariboFactory implements Creational_Design_Patterns.Factory.Abstrac
     private static HariboFactory hariboFactory;
     private CandySeller candySeller = new CandySeller();
 
-    private HariboFactory() {}
+    private HariboFactory() {
+    }
 
     public static HariboFactory getHariboInstance() {
         if (hariboFactory == null)
@@ -19,25 +20,25 @@ public class HariboFactory implements Creational_Design_Patterns.Factory.Abstrac
 
     @Override
     public Candy sellCandy(String product) {
-        switch (product) {
-            case "sour jelly":
-                SourJellyBuilder sourJellyBuilder = new SourJellyBuilder();
-                candySeller.makeHariboSourJelly(sourJellyBuilder);
-                return sourJellyBuilder.getProduct();
-            case "jelly beans":
-                JellyBeansBuilder jellyBeansBuilder = new JellyBeansBuilder();
-                candySeller.makeHariboJellyBeans(jellyBeansBuilder);
-                return jellyBeansBuilder.getProduct();
-            case "lollipop":
-                LollipopBuilder lollipopBuilder = new LollipopBuilder();
-                candySeller.makeHariboLollipop(lollipopBuilder);
-                return lollipopBuilder.getProduct();
-            case "mint":
-                MintBuilder mintBuilder = new MintBuilder();
-                candySeller.makeHariboMint(mintBuilder);
-                return mintBuilder.getProduct();
-            default:
-                return  null;
+        if (product.equals("sour jelly")) {
+            SourJellyBuilder sourJellyBuilder = new SourJellyBuilder();
+            candySeller.makeHariboSourJelly(sourJellyBuilder);
+            return sourJellyBuilder.getProduct();
+        } else if (product.equals("jelly beans")) {
+            SourJellyBuilder sourJellyBuilder = new SourJellyBuilder();
+            candySeller.makeHariboSourJelly(sourJellyBuilder);
+            return sourJellyBuilder.getProduct();
+        } else if (product.equals("lollipop")) {
+            LollipopBuilder lollipopBuilder = new LollipopBuilder();
+            candySeller.makeHariboLollipop(lollipopBuilder);
+            return lollipopBuilder.getProduct();
+        } else if (product.equals("mint")) {
+            MintBuilder mintBuilder = new MintBuilder();
+            candySeller.makeHariboMint(mintBuilder);
+            return mintBuilder.getProduct();
+        } else {
+            return null;
         }
+
     }
 }

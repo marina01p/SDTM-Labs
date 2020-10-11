@@ -20,25 +20,24 @@ public class JellyBellyFactory implements Creational_Design_Patterns.Factory.Abs
 
     @Override
     public Candy sellCandy(String product) {
-        switch (product) {
-            case "sour jelly":
-                SourJellyBuilder sourJellyBuilder = new SourJellyBuilder();
-                candySeller.makeJellyBellySourJelly(sourJellyBuilder);
-                return sourJellyBuilder.getProduct();
-            case "jelly beans":
-                JellyBeansBuilder jellyBeansBuilder = new JellyBeansBuilder();
-                candySeller.makeJellyBellyJellyBeans(jellyBeansBuilder);
-                return jellyBeansBuilder.getProduct();
-            case "lollipop":
-                LollipopBuilder lollipopBuilder = new LollipopBuilder();
-                candySeller.makeJellyBellyLollipop(lollipopBuilder);
-                return lollipopBuilder.getProduct();
-            case "mint":
-                MintBuilder mintBuilder = new MintBuilder();
-                candySeller.makeJellyBellyMint(mintBuilder);
-                return mintBuilder.getProduct();
-            default:
-                return null;
+        if (product.equals("sour jelly")) {
+            SourJellyBuilder sourJellyBuilder = new SourJellyBuilder();
+            candySeller.makeJellyBellySourJelly(sourJellyBuilder);
+            return sourJellyBuilder.getProduct();
+        } else if (product.equals("jelly beans")) {
+            JellyBeansBuilder jellyBeansBuilder = new JellyBeansBuilder();
+            candySeller.makeJellyBellyJellyBeans(jellyBeansBuilder);
+            return jellyBeansBuilder.getProduct();
+        } else if (product.equals("lollipop")) {
+            LollipopBuilder lollipopBuilder = new LollipopBuilder();
+            candySeller.makeJellyBellyLollipop(lollipopBuilder);
+            return lollipopBuilder.getProduct();
+        } else if (product.equals("mint")) {
+            MintBuilder mintBuilder = new MintBuilder();
+            candySeller.makeJellyBellyMint(mintBuilder);
+            return mintBuilder.getProduct();
+        } else {
+            return null;
         }
 
     }
