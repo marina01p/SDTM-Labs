@@ -30,6 +30,28 @@ Implemented creational design pattern used in this laboratory work are:
   4. Abstract Factory
 
 ### Builder
+The builder is needed when:
+- you want is to avoid using complex constructors (because long lists of parameters are confusing and do not give you much flexibility when creating a class);
+- you want to move the construction of complex objects out of the constructor;
+- you want to improve code scalability.
+
+For this laboratory work, I created 4 Builders (JellyBeansBuilder.java, LollipopBuilder.java, MintBuilder.java, SourJellyBuilder.java), by that ensuring that I collect all information from 4 already existing classes (JellyBeans.java, Lollipop.java, Mint.java, SourJelly.java) (which I refactored) on the builder objects. 
+```
+    @Override
+    public void setProduct(String productName) {
+        this.mint.setProduct(productName);
+    }
+
+    @Override
+    public void setManufacturer(String manufacturer) {
+        this.mint.setManufacturer(manufacturer);
+    }
+
+    @Override
+    public void setComposition(boolean sugarFree) {
+        this.mint.setComposition(sugarFree);
+    }
+```
 
 
 ## Results/Screenshots/Conclusions:
