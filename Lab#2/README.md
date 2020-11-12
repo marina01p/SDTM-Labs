@@ -33,7 +33,7 @@ Some examples of this kind of design patterns are :
 
 3. Document your work in a separate markdown file according to the required structure.
 
-*Lab#1 - [a link](https://github.com/marina01p/SDTM-Labs/tree/main/Lab%231)
+*[Lab#1](https://github.com/marina01p/SDTM-Labs/tree/main/Lab%231)
 
 ## Implementation & Explanation:
 
