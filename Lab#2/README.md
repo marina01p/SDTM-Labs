@@ -23,30 +23,18 @@ Some examples of this kind of design patterns are :
    
 ## Task:
 
-1. By extending your project (Lab#1*), implement at least 3 structural design patterns in your project:
+1. By extending your project (Lab#1*), implement at least 3 structural design patterns:
 
-The implemented design pattern should help to perform the tasks involved in your system;
-The object creation mechanisms/patterns can now be buried into the functionalities instead of using them into the client;
-There should only be one client for the whole system;
+* The implemented design pattern should help to perform the tasks involved in your system;
+* The object creation mechanisms/patterns can now be buried into the functionalities instead of using them into the client;
+* There should only be one client for the whole system;
 
-2. Keep your files grouped (into packages/directories) by their responsibilities (an example project structure):
+2. Keep your files grouped (into packages/directories) by their responsibilities;
 
-client;
-domain;
-utilities;
-data(if applies);
+3. Document your work in a separate markdown file according to the required structure.
 
-3. Document your work in a separate markdown file according to the requirements presented below (the structure can be extended of course):
+*Lab#1 - [a link](https://github.com/marina01p/SDTM-Labs/tree/main/Lab%231)
 
-Topic of the laboratory work;
-Author;
-Introduction/Theory/Motivation;
-Implementation & Explanation (you can include code snippets as well):
-Indicate the location of the code snippet;
-Emphasize the main idea and motivate the usage of the pattern;
-Results/Screenshots/Conclusions;
-
-*Lab#1 - 
 ## Implementation & Explanation:
 
 The project is written in Java JDK 15.
