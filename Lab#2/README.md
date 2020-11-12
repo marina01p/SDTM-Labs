@@ -23,7 +23,7 @@ Some examples of this kind of design patterns are :
    
 ## Task:
 
- 1. By extending your project, implement atleast 3 structural design patterns in your project:
+1. By extending your project (Lab#1*), implement at least 3 structural design patterns in your project:
 
 The implemented design pattern should help to perform the tasks involved in your system;
 The object creation mechanisms/patterns can now be buried into the functionalities instead of using them into the client;
@@ -46,16 +46,12 @@ Indicate the location of the code snippet;
 Emphasize the main idea and motivate the usage of the pattern;
 Results/Screenshots/Conclusions;
 
-   
+*Lab#1 - 
 ## Implementation & Explanation:
 
 The project is written in Java JDK 15.
 
-Implemented creational design pattern used in this laboratory work are:
-  1. Builder
-  2. Singleton
-  3. Factory Method
-  4. Abstract Factory
+Implemented structural design pattern used in this laboratory work are:
 
 
 
