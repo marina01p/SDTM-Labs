@@ -1,23 +1,51 @@
-# Topic: *Creational Design Patterns*
+# Topic: *Structural Design Patterns*
 ## Author: *Petici Marina*
-## Task:
 
-1. Choose an OO programming language and a suitable IDE or Editor (No frameworks/libs/engines allowed);
-2. Select a domain area for the sample project;
-3. Define the main involved classes and think about what instantiation mechanisms are needed;
-4. Based on the previous point, implement atleast 3 creational design patterns in your project;
+## Table of contents
+* [Introduction](#introduction)
+* [Task](#task)
+* [Implementation & Explanation](#implementation&explanation)
+* [Results/Screenshots/Conclusions](#results/screenshots/conclusions)
+* [Status](#status)
 
-## Some Theory:
-In software engineering, creational design patterns are a way of structuring code to make it more simple, maintainable and effective.
+## Introduction:
+--- about structural design patterns
 
 Some examples of this kind of design patterns are :
 
-   * Singleton
-   * Builder
-   * Prototype
-   * Object Pooling
-   * Factory Method
-   * Abstract Factory
+   * Adapter
+   * Bridge
+   * Composite
+   * Decorator
+   * Facade
+   * Flyweight
+   * Proxy
+   
+## Task:
+
+ 1. By extending your project, implement atleast 3 structural design patterns in your project:
+
+The implemented design pattern should help to perform the tasks involved in your system;
+The object creation mechanisms/patterns can now be buried into the functionalities instead of using them into the client;
+There should only be one client for the whole system;
+
+2. Keep your files grouped (into packages/directories) by their responsibilities (an example project structure):
+
+client;
+domain;
+utilities;
+data(if applies);
+
+3. Document your work in a separate markdown file according to the requirements presented below (the structure can be extended of course):
+
+Topic of the laboratory work;
+Author;
+Introduction/Theory/Motivation;
+Implementation & Explanation (you can include code snippets as well):
+Indicate the location of the code snippet;
+Emphasize the main idea and motivate the usage of the pattern;
+Results/Screenshots/Conclusions;
+
    
 ## Implementation & Explanation:
 
@@ -29,80 +57,11 @@ Implemented creational design pattern used in this laboratory work are:
   3. Factory Method
   4. Abstract Factory
 
-### Builder
-The builder is needed when:
-- you want is to avoid using complex constructors (because long lists of parameters are confusing and do not give you much flexibility when creating a class);
-- you want to move the construction of complex objects out of the constructor;
-- you want to improve code scalability.
 
-For this laboratory work, I created 4 Builders (JellyBeansBuilder.java, LollipopBuilder.java, MintBuilder.java, SourJellyBuilder.java), by that ensuring that I collect all information from 4 already existing classes (JellyBeans.java, Lollipop.java, Mint.java, SourJelly.java) (which I refactored) on the builder objects. 
-```
-    @Override
-    public void setProduct(String productName) {
-        this.mint.setProduct(productName);
-    }
 
-```
-### Abstract Factory
-The abstract factory pattern provides a way to encapsulate a group of individual factories that have a common theme without specifying their concrete classes.
-Since I have two factory design patterns (HariboFactory and JellyBellyFactory), with AbstractFactory.java code I encapsulaed both of them.
-```
-public interface AbstractFactory {
-    Candy sellCandy(String name);
-}
-```
 
-### Singleton
-The singleton pattern is a software design pattern that restricts the instantiation of a class to one "single" instance.
-In this code it is used from this code example:
-```
-    private Singleton() {} 
-  
-    public static Singleton getInstance() 
-    { 
-        if (obj==null) 
-            obj = new Singleton(); 
-        return obj; 
-    } 
-```
-And adapted for my code:
-```
-    private HariboFactory() {}
-
-    public static JellyBellyFactory getJellyBellyInstance() {
-        if (jellyBellyFactory == null)
-            jellyBellyFactory = new JellyBellyFactory();
-        return jellyBellyFactory;
-    }
-```
-### Factory Method
-
-The factory method pattern uses factory methods to deal with the problem of creating objects without having to specify the exact class of the object that will be created.
-In my project I created a factory to generate object of concrete classes based on given information by using if-else statements.
-```
-if (product.equals("sour jelly")) {
-            SourJellyBuilder sourJellyBuilder = new SourJellyBuilder();
-            candySeller.makeHariboSourJelly(sourJellyBuilder);
-            return sourJellyBuilder.getProduct();
-        } else if (product.equals("jelly beans")) {
-            SourJellyBuilder sourJellyBuilder = new SourJellyBuilder();
-            candySeller.makeHariboSourJelly(sourJellyBuilder);
-            return sourJellyBuilder.getProduct();
-```
 ## Results/Screenshots/Conclusions:
-Main Online Candy Store Screen:
 
 
-![alt text](https://github.com/marina01p/SDTM-Labs/blob/main/Lab%231/Screeshots/screen_1.png)
-
-
-Searching for a product:
-
-
-![alt text](https://github.com/marina01p/SDTM-Labs/blob/main/Lab%231/Screeshots/screen_2.png)
-
-
-Buying the product:
-
-
-![alt text](https://github.com/marina01p/SDTM-Labs/blob/main/Lab%231/Screeshots/screen_3.png)
+## Status
+This project is finished.
