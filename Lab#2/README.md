@@ -25,11 +25,11 @@ Some examples of this kind of design patterns are :
 
 1. By extending your project (Lab#1*), implement at least 3 structural design patterns:
 
-  * The implemented design pattern should help to perform the tasks involved in your system;
-  * The object creation mechanisms/patterns can now be buried into the functionalities instead of using them into the client;
-  * There should only be one client for the whole system;
+    * The implemented design pattern should help to perform the tasks involved in your system;
+    * The object creation mechanisms/patterns can now be buried into the functionalities instead of using them into the client;
+    * There should only be one client for the whole system;
 
-  *[Lab#1](https://github.com/marina01p/SDTM-Labs/tree/main/Lab%231)
+    *[Lab#1](https://github.com/marina01p/SDTM-Labs/tree/main/Lab%231)
   
 2. Keep your files grouped (into packages/directories) by their responsibilities;
 
