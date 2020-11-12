@@ -48,4 +48,4 @@ Implemented structural design pattern used in this laboratory work are:
 
 
 ## Status
-This project is finished.
+This project is not finished.
