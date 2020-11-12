@@ -10,7 +10,7 @@
 
 ## Introduction:
 
-Structural design patterns are concerned with how classes and objects can be composed, to form larger structures. Its design pattern simplifies the structure by identifying the relationships and focus on how the classes inherit from each other and how they are composed from other classes.
+Structural design patterns are concerned with how classes and objects can be composed, to form larger structures. They enable you to create systems without rewriting or customizing the code because these patterns provide the system with enhanced reusability and robust functionality.
 
 Some examples of this kind of design patterns are :
 
