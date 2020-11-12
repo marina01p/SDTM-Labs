@@ -3,9 +3,9 @@
 
 ## Table of contents
 * [Introduction](#introduction)
-* [Task](#task)
-* [Implementation & Explanation](#implementation&explanation)
-* [Results/Screenshots/Conclusions](#results/screenshots/conclusions)
+* [Objectives](#objectives)
+* [Implementation](#implementation)
+* [Resultss](#results)
 * [Status](#status)
 
 ## Introduction:
@@ -22,7 +22,7 @@ Some examples of this kind of design patterns are :
    * Flyweight
    * Proxy
    
-## Task:
+## Objectives:
 
 1. By extending your project (Lab#1*), implement at least 3 structural design patterns:
 
@@ -37,7 +37,7 @@ Some examples of this kind of design patterns are :
 3. Document your work in a separate markdown file according to the required structure.
 
 
-## Implementation & Explanation:
+## Implementation:
 
 The project is written in Java JDK 15.
 
@@ -46,7 +46,7 @@ Implemented structural design pattern used in this laboratory work are:
 
 
 
-## Results/Screenshots/Conclusions:
+## Results:
 
 
 ## Status
