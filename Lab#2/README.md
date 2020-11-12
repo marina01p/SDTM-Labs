@@ -9,7 +9,8 @@
 * [Status](#status)
 
 ## Introduction:
---- about structural design patterns
+
+Structural design patterns are concerned with how classes and objects can be composed, to form larger structures. Its design pattern simplifies the structure by identifying the relationships and focus on how the classes inherit from each other and how they are composed from other classes.
 
 Some examples of this kind of design patterns are :
 
