@@ -8,7 +8,7 @@
 * [Resultss](#results)
 * [Status](#status)
 
-## Introduction:
+## Introduction
 
 Structural design patterns are concerned with how classes and objects can be composed, to form larger structures. They enable you to create systems without rewriting or customizing the code because these patterns provide the system with enhanced reusability and robust functionality.
 
@@ -22,7 +22,7 @@ Some examples of this kind of design patterns are :
    * Flyweight
    * Proxy
    
-## Objectives:
+## Objectives
 
 1. By extending your project (Lab#1*), implement at least 3 structural design patterns:
 
@@ -37,7 +37,7 @@ Some examples of this kind of design patterns are :
 3. Document your work in a separate markdown file according to the required structure.
 
 
-## Implementation:
+## Implementation
 
 The project is written in Java JDK 15.
 
@@ -46,7 +46,7 @@ Implemented structural design pattern used in this laboratory work are:
 
 
 
-## Results:
+## Results
 
 
 ## Status
