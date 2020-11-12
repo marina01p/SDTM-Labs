@@ -43,7 +43,14 @@ The project is written in Java JDK 15.
 
 Implemented structural design pattern used in this laboratory work are:
 
+### Adapter
+The adapter pattern convert the interface of a class into another interface clients expect. 
+It lets classes work together that couldn’t otherwise because of incompatible interfaces.
 
+
+### Decorator
+The Decorator pattern is a structural pattern that lets you attach additional functionalities to an object dynamically. 
+In other words, the client has the freedom to create an object and then extend it by adding a variety of “features” to it.
 
 
 ## Results
