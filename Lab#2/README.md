@@ -5,7 +5,7 @@
 * [Introduction](#introduction)
 * [Objectives](#objectives)
 * [Implementation](#implementation)
-* [Resultss](#results)
+* [Results](#results)
 * [Status](#status)
 
 ## Introduction
