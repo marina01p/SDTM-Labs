@@ -1,8 +1,8 @@
-package Creational_Design_Patterns.Builder;
+package utilities.builder;
 
-import Creational_Design_Patterns.Candy.Mint;
+import domain.Mint;
 
-public class MintBuilder implements Creational_Design_Patterns.Builder.CandyBuilder {
+public class MintBuilder implements utilities.builder.CandyBuilder {
     private Mint mint;
 
     public MintBuilder() {

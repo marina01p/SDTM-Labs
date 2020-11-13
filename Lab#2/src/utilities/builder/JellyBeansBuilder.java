@@ -1,8 +1,8 @@
-package Creational_Design_Patterns.Builder;
+package utilities.builder;
 
-import Creational_Design_Patterns.Candy.JellyBeans;
+import domain.JellyBeans;
 
-public class JellyBeansBuilder implements Creational_Design_Patterns.Builder.CandyBuilder {
+public class JellyBeansBuilder implements utilities.builder.CandyBuilder {
     private JellyBeans jellyBeans;
 
     public JellyBeansBuilder() {

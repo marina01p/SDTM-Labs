@@ -1,6 +1,6 @@
-package Creational_Design_Patterns;
+package client;
 
-import Creational_Design_Patterns.Builder.*;
+import utilities.builder.*;
 
 public class CandySeller {
 

@@ -1,10 +1,10 @@
-package Creational_Design_Patterns.Factory;
+package utilities.factory;
 
-import Creational_Design_Patterns.Builder.*;
-import Creational_Design_Patterns.Candy.Candy;
-import Creational_Design_Patterns.CandySeller;
+import client.CandySeller;
+import domain.Candy;
+import utilities.builder.*;
 
-public class JellyBellyFactory implements Creational_Design_Patterns.Factory.AbstractFactory {
+public class JellyBellyFactory implements utilities.factory.AbstractFactory {
 
     private static JellyBellyFactory jellyBellyFactory;
     private CandySeller candySeller = new CandySeller();

@@ -1,6 +1,6 @@
-package Creational_Design_Patterns;
+package client;
 
-import Creational_Design_Patterns.Factory.*;
+import utilities.factory.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -30,7 +30,7 @@ public class Main {
         System.out.println("==============================");
 
         BufferedReader factoryLine = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the desired factory : ");
+        System.out.println("Enter the desired utilities.factory : ");
         String name1 = factoryLine.readLine();
 
         AbstractFactory hariboFactory = HariboFactory.getHariboInstance();
@@ -61,7 +61,7 @@ public class Main {
                         System.out.println(jellyBellyFactory.sellCandy("jelly beans").toString());
                         break;
                     default:
-                        System.out.println("You entered an invalid factory.");
+                        System.out.println("You entered an invalid utilities.factory.");
                 }
                 break;
 
@@ -89,7 +89,7 @@ public class Main {
                         System.out.println(jellyBellyFactory.sellCandy("lollipop").toString());
                         break;
                     default:
-                        System.out.println("You entered an invalid factory.");
+                        System.out.println("You entered an invalid utilities.factory.");
                 }
                 break;
 
@@ -98,7 +98,7 @@ public class Main {
         }
 
         BufferedReader purchaseLine = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("\nEnter the desired product and name of the factory (x, y): ");
+        System.out.println("\nEnter the desired product and name of the utilities.factory (x, y): ");
         String name2 = purchaseLine.readLine();
 
         String n = "\nYour purchase:";

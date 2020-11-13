@@ -1,10 +1,10 @@
-package Creational_Design_Patterns.Factory;
+package utilities.factory;
 
-import Creational_Design_Patterns.Builder.*;
-import Creational_Design_Patterns.Candy.Candy;
-import Creational_Design_Patterns.CandySeller;
+import client.CandySeller;
+import domain.Candy;
+import utilities.builder.*;
 
-public class HariboFactory implements Creational_Design_Patterns.Factory.AbstractFactory {
+public class HariboFactory implements utilities.factory.AbstractFactory {
 
     private static HariboFactory hariboFactory;
     private CandySeller candySeller = new CandySeller();

@@ -1,8 +1,8 @@
-package Creational_Design_Patterns.Builder;
+package utilities.builder;
 
-import Creational_Design_Patterns.Candy.SourJelly;
+import domain.SourJelly;
 
-public class SourJellyBuilder implements Creational_Design_Patterns.Builder.CandyBuilder {
+public class SourJellyBuilder implements utilities.builder.CandyBuilder {
     private SourJelly sourJelly;
 
     public SourJellyBuilder() {

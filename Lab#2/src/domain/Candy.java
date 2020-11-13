@@ -1,7 +1,6 @@
-package Creational_Design_Patterns.Builder;
+package domain;
 
-public interface CandyBuilder {
-    void reset();
+public interface Candy {
     void setProduct(String productName);
     void setManufacturer(String manufacturer);
     void setComposition(boolean sugarFree);

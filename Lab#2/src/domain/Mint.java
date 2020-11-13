@@ -1,6 +1,6 @@
-package Creational_Design_Patterns.Candy;
+package domain;
 
-public class Mint implements Creational_Design_Patterns.Candy.Candy {
+public class Mint implements domain.Candy {
     private String productName;
     private String manufacturer;
     private boolean sugarFree;

@@ -1,8 +1,8 @@
-package Creational_Design_Patterns.Builder;
+package utilities.builder;
 
-import Creational_Design_Patterns.Candy.Lollipop;
+import domain.Lollipop;
 
-public class LollipopBuilder implements Creational_Design_Patterns.Builder.CandyBuilder {
+public class LollipopBuilder implements utilities.builder.CandyBuilder {
     private Lollipop lollipop;
 
     public LollipopBuilder() {

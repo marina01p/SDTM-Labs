@@ -1,6 +1,6 @@
-package Creational_Design_Patterns.Candy;
+package domain;
 
-public class JellyBeans implements Creational_Design_Patterns.Candy.Candy {
+public class JellyBeans implements domain.Candy {
     private String productName;
     private String manufacturer;
     private boolean sugarFree;

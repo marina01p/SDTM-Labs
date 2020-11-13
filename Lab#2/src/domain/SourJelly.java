@@ -1,14 +1,12 @@
-package Creational_Design_Patterns.Candy;
+package domain;
 
-public class Lollipop implements Creational_Design_Patterns.Candy.Candy {
+public class SourJelly implements domain.Candy {
     private String productName;
     private String manufacturer;
     private boolean sugarFree;
     private double price;
 
-    public void setProduct(String productName) {
-        this.productName = productName;
-    }
+    public void setProduct(String productName) { this.productName = productName; }
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
     }
@@ -19,10 +17,12 @@ public class Lollipop implements Creational_Design_Patterns.Candy.Candy {
         this.price = price;
     }
 
+    @Override
     public String toString() {
         return "\nProduct: " + productName +
                 "\nManufacturer: " + manufacturer +
                 "\nSugar Free: " + sugarFree +
                 "\nPrice : " + price + "$";
     }
+
 }

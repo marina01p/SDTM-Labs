@@ -1,14 +1,14 @@
-package Creational_Design_Patterns.Candy;
+package domain;
 
-import java.util.ArrayList;
-
-public class SourJelly implements Candy {
+public class Lollipop implements domain.Candy {
     private String productName;
     private String manufacturer;
     private boolean sugarFree;
     private double price;
 
-    public void setProduct(String productName) { this.productName = productName; }
+    public void setProduct(String productName) {
+        this.productName = productName;
+    }
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
     }
@@ -19,12 +19,10 @@ public class SourJelly implements Candy {
         this.price = price;
     }
 
-    @Override
     public String toString() {
         return "\nProduct: " + productName +
                 "\nManufacturer: " + manufacturer +
                 "\nSugar Free: " + sugarFree +
                 "\nPrice : " + price + "$";
     }
-
 }
