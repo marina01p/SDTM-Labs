@@ -1,6 +1,6 @@
-package domain;
+package domain.candy;
 
-public class Mint implements domain.Candy {
+public class Mint implements Candy {
     private String productName;
     private String manufacturer;
     private boolean sugarFree;

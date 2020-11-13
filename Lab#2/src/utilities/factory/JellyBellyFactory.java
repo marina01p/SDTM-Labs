@@ -1,7 +1,7 @@
 package utilities.factory;
 
 import client.CandySeller;
-import domain.Candy;
+import domain.candy.Candy;
 import utilities.builder.*;
 
 public class JellyBellyFactory implements utilities.factory.AbstractFactory {

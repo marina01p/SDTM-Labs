@@ -1,4 +1,4 @@
-package domain;
+package domain.candy;
 
 public interface Candy {
     void setProduct(String productName);

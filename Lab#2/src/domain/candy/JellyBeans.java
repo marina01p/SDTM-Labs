@@ -1,6 +1,6 @@
-package domain;
+package domain.candy;
 
-public class Lollipop implements domain.Candy {
+public class JellyBeans implements Candy {
     private String productName;
     private String manufacturer;
     private boolean sugarFree;

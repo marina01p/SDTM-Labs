@@ -1,6 +1,6 @@
 package utilities.builder;
 
-import domain.Mint;
+import domain.candy.Mint;
 
 public class MintBuilder implements utilities.builder.CandyBuilder {
     private Mint mint;

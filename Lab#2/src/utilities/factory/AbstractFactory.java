@@ -1,6 +1,6 @@
 package utilities.factory;
 
-import domain.Candy;
+import domain.candy.Candy;
 
 public interface AbstractFactory {
     Candy sellCandy(String name);

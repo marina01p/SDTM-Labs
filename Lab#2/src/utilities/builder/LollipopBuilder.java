@@ -1,6 +1,6 @@
 package utilities.builder;
 
-import domain.Lollipop;
+import domain.candy.Lollipop;
 
 public class LollipopBuilder implements utilities.builder.CandyBuilder {
     private Lollipop lollipop;

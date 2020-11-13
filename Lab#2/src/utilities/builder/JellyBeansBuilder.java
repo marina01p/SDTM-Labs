@@ -1,6 +1,6 @@
 package utilities.builder;
 
-import domain.JellyBeans;
+import domain.candy.JellyBeans;
 
 public class JellyBeansBuilder implements utilities.builder.CandyBuilder {
     private JellyBeans jellyBeans;

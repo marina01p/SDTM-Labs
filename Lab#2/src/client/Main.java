@@ -1,5 +1,8 @@
 package client;
 
+import domain.packet.GiftBox;
+import domain.packet.PlasticBag;
+import utilities.adapter.PacketAdapter;
 import utilities.factory.*;
 
 import java.io.BufferedReader;
@@ -10,6 +13,7 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
+
 
 
         System.out.println("Welcome to this Online Candy Store!\n");
@@ -30,7 +34,7 @@ public class Main {
         System.out.println("==============================");
 
         BufferedReader factoryLine = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the desired utilities.factory : ");
+        System.out.println("Enter the desired factory : ");
         String name1 = factoryLine.readLine();
 
         AbstractFactory hariboFactory = HariboFactory.getHariboInstance();
@@ -86,7 +90,7 @@ public class Main {
                         System.out.println("\n------ Hard Candy ------");
                         System.out.println("\n- J E L L Y   B E L L Y -");
                         System.out.println(jellyBellyFactory.sellCandy("lollipop").toString());
-                        System.out.println(jellyBellyFactory.sellCandy("lollipop").toString());
+                        System.out.println(jellyBellyFactory.sellCandy("mint").toString());
                         break;
                     default:
                         System.out.println("You entered an invalid utilities.factory.");
@@ -97,57 +101,66 @@ public class Main {
                 System.out.println("You entered an invalid product.");
         }
 
+
         BufferedReader purchaseLine = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("\nEnter the desired product and name of the utilities.factory (x, y): ");
+        System.out.println("\nEnter the desired product and name of the factory (x, y): ");
         String name2 = purchaseLine.readLine();
 
-        String n = "\nYour purchase:";
-        String m = "\nThank you for your purchase!";
 
         switch (name2.toLowerCase().replace(",", "")) {
             case "sour jelly haribo":
-                System.out.println(n);
                 System.out.println(hariboFactory.sellCandy("sour jelly").toString());
-                System.out.println(m);
                 break;
             case "sour jelly jelly belly":
-                System.out.println(n);
                 System.out.println(jellyBellyFactory.sellCandy("sour jelly").toString());
-                System.out.println(m);
                 break;
             case "jelly beans haribo":
-                System.out.println(n);
                 System.out.println(hariboFactory.sellCandy("jelly beans").toString());
-                System.out.println(m);
                 break;
             case "jelly beans jelly belly":
-                System.out.println(n);
                 System.out.println(jellyBellyFactory.sellCandy("jelly beans").toString());
-                System.out.println(m);
                 break;
             case "lollipop haribo":
-                System.out.println(n);
                 System.out.println(hariboFactory.sellCandy("lollipop").toString());
-                System.out.println(m);
                 break;
             case "lollipop jelly belly":
-                System.out.println(n);
                 System.out.println(jellyBellyFactory.sellCandy("lollipop").toString());
-                System.out.println(m);
                 break;
             case "mint haribo":
-                System.out.println(n);
                 System.out.println(hariboFactory.sellCandy("mint").toString());
-                System.out.println(m);
                 break;
             case "mint jelly belly":
-                System.out.println(n);
                 System.out.println(jellyBellyFactory.sellCandy("mint").toString());
-                System.out.println(m);
                 break;
             default:
                 System.out.println("Invalid product name.");
 
+        }
+
+        System.out.println("\n====================================");
+        System.out.println("Our Packages:");
+        System.out.println("====================================");
+
+        GiftBox giftBox = new GiftBox();
+        PlasticBag plasticBag = new PlasticBag();
+        PacketAdapter giftBoxAdapter = new PacketAdapter(giftBox);
+        PacketAdapter plasticBagAdapter = new PacketAdapter(plasticBag);
+
+        System.out.println(giftBoxAdapter);
+        System.out.println(plasticBagAdapter);
+        System.out.println("\nChoose a package for your purchase:");
+
+        BufferedReader purchasePacket = new BufferedReader(new InputStreamReader(System.in));
+        String packageChooser = purchasePacket.readLine();
+        switch(packageChooser.toLowerCase()) {
+            case "gift box":
+                System.out.println("Thank you for your purchase! (+500 points to your karma for being ECO friendly)");
+                break;
+            case "plastic bag":
+                System.out.println("Thank you for your purchase!");
+                break;
+            default:
+                System.out.println("Invalid product! Try again");
         }
     }
 }

@@ -1,6 +1,6 @@
 package utilities.builder;
 
-import domain.SourJelly;
+import domain.candy.SourJelly;
 
 public class SourJellyBuilder implements utilities.builder.CandyBuilder {
     private SourJelly sourJelly;

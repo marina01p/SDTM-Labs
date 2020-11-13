@@ -1,7 +1,7 @@
 package utilities.factory;
 
 import client.CandySeller;
-import domain.Candy;
+import domain.candy.Candy;
 import utilities.builder.*;
 
 public class HariboFactory implements utilities.factory.AbstractFactory {
@@ -25,9 +25,9 @@ public class HariboFactory implements utilities.factory.AbstractFactory {
             candySeller.makeHariboSourJelly(sourJellyBuilder);
             return sourJellyBuilder.getProduct();
         } else if (product.equals("jelly beans")) {
-            SourJellyBuilder sourJellyBuilder = new SourJellyBuilder();
-            candySeller.makeHariboSourJelly(sourJellyBuilder);
-            return sourJellyBuilder.getProduct();
+            JellyBeansBuilder jellyBeansBuilder = new JellyBeansBuilder();
+            candySeller.makeHariboJellyBeans(jellyBeansBuilder);
+            return jellyBeansBuilder.getProduct();
         } else if (product.equals("lollipop")) {
             LollipopBuilder lollipopBuilder = new LollipopBuilder();
             candySeller.makeHariboLollipop(lollipopBuilder);
