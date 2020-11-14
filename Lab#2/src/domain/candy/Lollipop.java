@@ -4,8 +4,8 @@ public class Lollipop implements Candy {
     private String productName;
     private String manufacturer;
     private boolean sugarFree;
-    private String flavour = "Sugar";
     private double price;
+    private String flavour = "Sugar";
 
     public void setProduct(String productName) {
         this.productName = productName;
