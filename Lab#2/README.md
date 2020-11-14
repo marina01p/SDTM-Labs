@@ -39,15 +39,22 @@ Some examples of this kind of design patterns are :
 
 ## Implementation
 
-The project is written in Java JDK 15.
+### Tools
 
-Implemented structural design pattern used in this laboratory work are:
+* Intellij IDEA
+* Java SE 15
+
+Implemented structural design pattern, for this laboratory work, are:
 
 ### Adapter
+
 The adapter pattern convert the interface of a class into another interface clients expect. 
 It lets classes work together that couldn’t otherwise because of incompatible interfaces.
 
-In order to implement it in my project, I created an interface *Packet* (domains.packet.Packet), and two classes that implement this interface, located in the same package directory - *GiftBox* and *PlasticBag*. The adapter itself is *PacketAdapter* (utilities.adapter.PacketAdapter).
+First, I created an interface (incompatible with my previous one *Candy.java* (domain.candy.Candy)) - *Packet.java* (domain.packet.Packet), and two classes that implement
+this interfece, located in the same package. (setComposition() / setConstitution)
+
+Then, I created the adapter itself *PacketAdapter*. It allows my code to have a subcategory in the candy storage, which empowers cliets to buy packages.
 
 ```
 public class PacketAdapter implements Candy {
@@ -65,8 +72,12 @@ public class PacketAdapter implements Candy {
 
 
 ### Decorator
-The Decorator pattern is a structural pattern that lets you attach additional functionalities to an object dynamically. 
-In other words, the client has the freedom to create an object and then extend it by adding a variety of “features” to it.
+Decorator pattern allows a user to add new functionality to an existing object without altering its structure. 
+This type of design pattern comes under structural pattern as this pattern acts as a wrapper to existing class.
+
+
+This pattern creates a decorator class which wraps the original class and provides additional functionality keeping class methods signature intact.
+
 ```
     private final String customFlavour;
 
@@ -84,13 +95,22 @@ This type of design pattern comes under structural pattern as this pattern adds 
 This pattern involves a single class which provides simplified methods required by client and delegates calls to methods of existing system classes.
 
 ```
-    private final AbstractFactory furnitureFactory;
+    private final AbstractFactory candyFactory;
 
-    public CandyFacade(AbstractFactory furnitureFactory) {
-        this.furnitureFactory = furnitureFactory;
+    public CandyFacade(AbstractFactory abstractFactory) {
+        this.candyFactory = abstractFactory;
     }
 ```
 ## Results
+
+Implementing this design patterns into my code empowered me to extend its functionality.
+
+Now with the help of decorator and facade, the client have a special section, with diffrent flavours from different manufacturers.
+
+![alt text](https://github.com/marina01p/SDTM-Labs/blob/main/Lab%232/screenshots/screen-01.png)
+
+Adapter on the other hand, allows the client to choose a package after their shopping is done.
+![alt text](https://github.com/marina01p/SDTM-Labs/blob/main/Lab%232/screenshots/screen-02.png)
 
 
 ## Status
