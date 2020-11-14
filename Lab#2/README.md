@@ -67,8 +67,29 @@ public class PacketAdapter implements Candy {
 ### Decorator
 The Decorator pattern is a structural pattern that lets you attach additional functionalities to an object dynamically. 
 In other words, the client has the freedom to create an object and then extend it by adding a variety of “features” to it.
+```
+    private final String customFlavour;
 
+    public FlavourDecorator(AbstractFactory abstractFactory, String customFlavour) {
+        super(abstractFactory);
+        this.customFlavour = customFlavour;
+    }
 
+```
+
+### Facade
+Facade pattern hides the complexities of the system and provides an interface to the client using which the client can access the system. 
+This type of design pattern comes under structural pattern as this pattern adds an interface to existing system to hide its complexities.
+
+This pattern involves a single class which provides simplified methods required by client and delegates calls to methods of existing system classes.
+
+```
+    private final AbstractFactory furnitureFactory;
+
+    public CandyFacade(AbstractFactory furnitureFactory) {
+        this.furnitureFactory = furnitureFactory;
+    }
+```
 ## Results
 
 
