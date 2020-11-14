@@ -5,7 +5,7 @@
 * [Introduction](#introduction)
 * [Objectives](#objectives)
 * [Implementation](#implementation)
-* [Resultss](#results)
+* [Results](#results)
 * [Status](#status)
 
 ## Introduction
@@ -46,6 +46,22 @@ Implemented structural design pattern used in this laboratory work are:
 ### Adapter
 The adapter pattern convert the interface of a class into another interface clients expect. 
 It lets classes work together that couldn’t otherwise because of incompatible interfaces.
+
+In order to implement it in my project, I created an interface *Packet* (domains.packet.Packet), and two classes that implement this interface, located in the same package directory - *GiftBox* and *PlasticBag*. The adapter itself is *PacketAdapter* (utilities.adapter.PacketAdapter).
+
+```
+public class PacketAdapter implements Candy {
+    private final Packet pack;
+
+    public PacketAdapter(Packet packet){
+        this.pack =  packet;
+    }
+
+    @Override
+    public String toString() {
+        return pack.toString();
+    }
+```
 
 
 ### Decorator
