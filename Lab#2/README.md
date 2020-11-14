@@ -51,10 +51,9 @@ Implemented structural design pattern, for this laboratory work, are:
 The adapter pattern convert the interface of a class into another interface clients expect. 
 It lets classes work together that couldn’t otherwise because of incompatible interfaces.
 
-First, I created an interface (incompatible with my previous one *Candy.java* (domain.candy.Candy)) - *Packet.java* (domain.packet.Packet), and two classes that implement
-this interfece, located in the same package. (setComposition() / setConstitution)
+For this design pattern, I created an interface (incompatible with my previous one *Candy.java* (domain.candy.Candy)) - *Packet.java* (domain.packet.Packet) - adaptee, and two classes that implement this interfece, located in the same package.
 
-Then, I created the adapter itself *PacketAdapter*. It allows my code to have a subcategory in the candy storage, which empowers cliets to buy packages.
+Then, I created the adapter itself *PacketAdapter*. It allows my code to have a subcategory in the candy storage, which empowers the cliets to buy packages.
 
 ```
 public class PacketAdapter implements Candy {
@@ -75,8 +74,7 @@ public class PacketAdapter implements Candy {
 Decorator pattern allows a user to add new functionality to an existing object without altering its structure. 
 This type of design pattern comes under structural pattern as this pattern acts as a wrapper to existing class.
 
-
-This pattern creates a decorator class which wraps the original class and provides additional functionality keeping class methods signature intact.
+For this design pattern, I created a decorator class *AbstractFacotryDecorator.java* (decorator.AbstractFactoryDecorator) and a concrete class *FlavourDecorator*. Those two wrap the original class and provides additional functionality keeping class methods signature intact and allow me to change the flavour and manufacturer of candies, bu that, allowing my code to have a special section of candies.
 
 ```
     private final String customFlavour;
@@ -92,7 +90,7 @@ This pattern creates a decorator class which wraps the original class and provid
 Facade pattern hides the complexities of the system and provides an interface to the client using which the client can access the system. 
 This type of design pattern comes under structural pattern as this pattern adds an interface to existing system to hide its complexities.
 
-This pattern involves a single class which provides simplified methods required by client and delegates calls to methods of existing system classes.
+For this design pattern, I created a class *CandyFacade.java* (facade.CandyFacade), which allows the code to communicate with the Decorator design pattern classes. It provides a simplified method and delegates calls to this methods.
 
 ```
     private final AbstractFactory candyFactory;
