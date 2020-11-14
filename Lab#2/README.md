@@ -74,7 +74,7 @@ public class PacketAdapter implements Candy {
 Decorator pattern allows a user to add new functionality to an existing object without altering its structure. 
 This type of design pattern comes under structural pattern as this pattern acts as a wrapper to existing class.
 
-For this design pattern, I created a decorator class *AbstractFacotryDecorator.java* (decorator.AbstractFactoryDecorator) and a concrete class *FlavourDecorator*. Those two wrap the original class and provides additional functionality keeping class methods signature intact and allow me to change the flavour and manufacturer of candies, bu that, allowing my code to have a special section of candies.
+For this design pattern, I created a decorator class *AbstractFacotryDecorator.java* (decorator.AbstractFactoryDecorator) and a concrete class *FlavourDecorator*. Those two wrap the original class and provide additional functionality keeping class methods signature intact and allow me to change the flavour and manufacturer of candies, bu that, allowing my code to have a special section of candies.
 
 ```
     private final String customFlavour;
