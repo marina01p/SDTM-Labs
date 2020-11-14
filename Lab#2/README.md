@@ -94,4 +94,4 @@ This pattern involves a single class which provides simplified methods required 
 
 
 ## Status
-This project is not finished.
+This project is finished.
