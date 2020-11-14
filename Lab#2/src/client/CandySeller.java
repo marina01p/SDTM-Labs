@@ -1,6 +1,6 @@
 package client;
 
-import utilities.builder.*;
+import builder.*;
 
 public class CandySeller {
 

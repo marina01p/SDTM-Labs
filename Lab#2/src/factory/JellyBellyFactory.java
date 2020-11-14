@@ -1,10 +1,10 @@
-package utilities.factory;
+package factory;
 
 import client.CandySeller;
 import domain.candy.Candy;
-import utilities.builder.*;
+import builder.*;
 
-public class JellyBellyFactory implements utilities.factory.AbstractFactory {
+public class JellyBellyFactory implements AbstractFactory {
 
     private static JellyBellyFactory jellyBellyFactory;
     private CandySeller candySeller = new CandySeller();

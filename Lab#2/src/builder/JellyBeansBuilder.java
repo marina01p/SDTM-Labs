@@ -1,8 +1,8 @@
-package utilities.builder;
+package builder;
 
 import domain.candy.JellyBeans;
 
-public class JellyBeansBuilder implements utilities.builder.CandyBuilder {
+public class JellyBeansBuilder implements builder.CandyBuilder {
     private JellyBeans jellyBeans;
 
     public JellyBeansBuilder() {

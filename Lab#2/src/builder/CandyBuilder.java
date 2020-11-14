@@ -1,4 +1,4 @@
-package utilities.builder;
+package builder;
 
 public interface CandyBuilder {
     void reset();

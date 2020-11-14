@@ -1,4 +1,4 @@
-package utilities.factory;
+package factory;
 
 import domain.candy.Candy;
 

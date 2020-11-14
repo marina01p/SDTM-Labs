@@ -1,8 +1,8 @@
-package utilities.builder;
+package builder;
 
 import domain.candy.Mint;
 
-public class MintBuilder implements utilities.builder.CandyBuilder {
+public class MintBuilder implements builder.CandyBuilder {
     private Mint mint;
 
     public MintBuilder() {

@@ -1,4 +1,4 @@
-package utilities.adapter;
+package adapter;
 
 import domain.candy.Candy;
 import domain.packet.Packet;

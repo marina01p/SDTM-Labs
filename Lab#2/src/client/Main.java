@@ -2,8 +2,10 @@ package client;
 
 import domain.packet.GiftBox;
 import domain.packet.PlasticBag;
-import utilities.adapter.PacketAdapter;
-import utilities.factory.*;
+import adapter.PacketAdapter;
+import factory.AbstractFactory;
+import factory.HariboFactory;
+import factory.JellyBellyFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,7 +15,6 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
-
 
 
         System.out.println("Welcome to this Online Candy Store!\n");
@@ -93,7 +94,7 @@ public class Main {
                         System.out.println(jellyBellyFactory.sellCandy("mint").toString());
                         break;
                     default:
-                        System.out.println("You entered an invalid utilities.factory.");
+                        System.out.println("You entered an invalid factory.");
                 }
                 break;
 
@@ -162,6 +163,7 @@ public class Main {
             default:
                 System.out.println("Invalid product! Try again");
         }
+
     }
 }
 

@@ -1,8 +1,8 @@
-package utilities.builder;
+package builder;
 
 import domain.candy.Lollipop;
 
-public class LollipopBuilder implements utilities.builder.CandyBuilder {
+public class LollipopBuilder implements builder.CandyBuilder {
     private Lollipop lollipop;
 
     public LollipopBuilder() {
