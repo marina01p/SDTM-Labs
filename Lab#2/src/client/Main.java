@@ -146,9 +146,10 @@ public class Main {
             case "s":
                 System.out.println("\n- S P E C I A L   F L A V O U R S -");
 
-                System.out.println(candyFacade.getCustomFurniture("mint", "Cherry", "My Style"));
-                System.out.println(candyFacade.getCustomFurniture("lollipop", "Strawberry", "Custom Style"));
-                System.out.println(candyFacade.getCustomFurniture("jellyBelly", "Coca Cola", "My own style"));
+                System.out.println(candyFacade.getCandy("mint", "Cherry", "Twizzlers"));
+                System.out.println(candyFacade.getCandy("lollipop", "Strawberry", "Chupa Chyps"));
+                System.out.println(candyFacade.getCandy("jellyBelly", "Coca Cola", "Starbust"));
+                System.out.println(candyFacade.getCandy("sourJelly", "Lemon", "Sour Patch"));
 
                 BufferedReader confirmLine6 = new BufferedReader(new InputStreamReader(System.in));
                 System.out.println("Confirm your purchase with 'y' or exit the store with 'e': ");
