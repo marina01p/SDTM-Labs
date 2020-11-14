@@ -29,7 +29,7 @@ public class Lollipop implements Candy {
         return "\nProduct: " + productName +
                 "\nManufacturer: " + manufacturer +
                 "\nSugar Free: " + sugarFree +
-                "\nPrice : " + price + "$" +
-                "\nFlavour: " + flavour;
+                "\nFlavour: " + flavour +
+                "\nPrice : " + price + "$";
     }
 }
