@@ -34,4 +34,9 @@ public class PacketAdapter implements Candy {
     public void setPrice(double price) {
 
     }
+
+    @Override
+    public void setFlavour(String flavour) {
+
+    }
 }

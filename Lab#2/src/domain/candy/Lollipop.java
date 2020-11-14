@@ -4,6 +4,7 @@ public class Lollipop implements Candy {
     private String productName;
     private String manufacturer;
     private boolean sugarFree;
+    private String flavour = "Sugar";
     private double price;
 
     public void setProduct(String productName) {
@@ -18,11 +19,17 @@ public class Lollipop implements Candy {
     public void setPrice(double price) {
         this.price = price;
     }
+    @Override
+    public void setFlavour(String flavour) {
+        this.flavour = flavour;
+    }
 
+    @Override
     public String toString() {
         return "\nProduct: " + productName +
                 "\nManufacturer: " + manufacturer +
                 "\nSugar Free: " + sugarFree +
-                "\nPrice : " + price + "$";
+                "\nPrice : " + price + "$" +
+                "\nFlavour: " + flavour;
     }
 }

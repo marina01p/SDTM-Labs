@@ -3,5 +3,5 @@ package factory;
 import domain.candy.Candy;
 
 public interface AbstractFactory {
-    Candy sellCandy(String name);
+    Candy sellCandy(String type);
 }

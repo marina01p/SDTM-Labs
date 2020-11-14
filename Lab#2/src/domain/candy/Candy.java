@@ -5,4 +5,5 @@ public interface Candy {
     void setManufacturer(String manufacturer);
     void setComposition(boolean sugarFree);
     void setPrice(double price);
+    void setFlavour(String flavour);
 }

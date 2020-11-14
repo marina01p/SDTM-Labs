@@ -2,10 +2,10 @@ package builder;
 
 import domain.candy.JellyBeans;
 
-public class JellyBeansBuilder implements builder.CandyBuilder {
+public class JellyBeansBuilder implements CandyBuilder {
     private JellyBeans jellyBeans;
 
-    public JellyBeansBuilder() {
+    public JellyBeansBuilder(){
         this.reset();
     }
 
@@ -15,8 +15,8 @@ public class JellyBeansBuilder implements builder.CandyBuilder {
     }
 
     @Override
-    public void setProduct(String productName) {
-        this.jellyBeans.setProduct(productName);
+    public void setProduct(String nameProduct) {
+        this.jellyBeans.setProduct(nameProduct);
     }
 
     @Override
@@ -34,7 +34,7 @@ public class JellyBeansBuilder implements builder.CandyBuilder {
         this.jellyBeans.setPrice(price);
     }
 
-    public JellyBeans getProduct() {
+    public JellyBeans getProduct(){
         JellyBeans product = this.jellyBeans;
         this.reset();
         return product;

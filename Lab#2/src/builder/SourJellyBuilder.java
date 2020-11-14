@@ -2,10 +2,10 @@ package builder;
 
 import domain.candy.SourJelly;
 
-public class SourJellyBuilder implements builder.CandyBuilder {
+public class SourJellyBuilder implements CandyBuilder {
     private SourJelly sourJelly;
 
-    public SourJellyBuilder() {
+    public SourJellyBuilder(){
         this.reset();
     }
 
@@ -15,8 +15,8 @@ public class SourJellyBuilder implements builder.CandyBuilder {
     }
 
     @Override
-    public void setProduct(String productName) {
-        this.sourJelly.setProduct(productName);
+    public void setProduct(String nameProduct) {
+        this.sourJelly.setProduct(nameProduct);
     }
 
     @Override
@@ -34,7 +34,7 @@ public class SourJellyBuilder implements builder.CandyBuilder {
         this.sourJelly.setPrice(price);
     }
 
-    public SourJelly getProduct() {
+    public SourJelly getProduct(){
         SourJelly product = this.sourJelly;
         this.reset();
         return product;

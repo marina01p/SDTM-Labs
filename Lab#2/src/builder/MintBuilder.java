@@ -2,10 +2,10 @@ package builder;
 
 import domain.candy.Mint;
 
-public class MintBuilder implements builder.CandyBuilder {
+public class MintBuilder implements CandyBuilder {
     private Mint mint;
 
-    public MintBuilder() {
+    public MintBuilder(){
         this.reset();
     }
 
@@ -15,8 +15,8 @@ public class MintBuilder implements builder.CandyBuilder {
     }
 
     @Override
-    public void setProduct(String productName) {
-        this.mint.setProduct(productName);
+    public void setProduct(String nameProduct) {
+        this.mint.setProduct(nameProduct);
     }
 
     @Override
@@ -34,7 +34,7 @@ public class MintBuilder implements builder.CandyBuilder {
         this.mint.setPrice(price);
     }
 
-    public Mint getProduct() {
+    public Mint getProduct(){
         Mint product = this.mint;
         this.reset();
         return product;

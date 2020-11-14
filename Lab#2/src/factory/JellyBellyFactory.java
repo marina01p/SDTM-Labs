@@ -1,44 +1,45 @@
 package factory;
 
-import client.CandySeller;
 import domain.candy.Candy;
-import builder.*;
+import builder.JellyBeansBuilder;
+import builder.LollipopBuilder;
+import builder.MintBuilder;
+import builder.SourJellyBuilder;
 
 public class JellyBellyFactory implements AbstractFactory {
 
-    private static JellyBellyFactory jellyBellyFactory;
-    private CandySeller candySeller = new CandySeller();
+    private static volatile JellyBellyFactory jellyBellyFactory;
+    private final CandySeller candySeller = new CandySeller();
 
-    public static JellyBellyFactory getJellyBellyInstance() {
+    private JellyBellyFactory() {}
+
+    public static JellyBellyFactory getJellyBellyFactory() {
         if (jellyBellyFactory == null)
             jellyBellyFactory = new JellyBellyFactory();
         return jellyBellyFactory;
     }
 
-    private JellyBellyFactory() {
-    }
-
     @Override
-    public Candy sellCandy(String product) {
-        if (product.equals("sour jelly")) {
-            SourJellyBuilder sourJellyBuilder = new SourJellyBuilder();
-            candySeller.makeJellyBellySourJelly(sourJellyBuilder);
-            return sourJellyBuilder.getProduct();
-        } else if (product.equals("jelly beans")) {
-            JellyBeansBuilder jellyBeansBuilder = new JellyBeansBuilder();
-            candySeller.makeJellyBellyJellyBeans(jellyBeansBuilder);
-            return jellyBeansBuilder.getProduct();
-        } else if (product.equals("lollipop")) {
-            LollipopBuilder lollipopBuilder = new LollipopBuilder();
-            candySeller.makeJellyBellyLollipop(lollipopBuilder);
-            return lollipopBuilder.getProduct();
-        } else if (product.equals("mint")) {
-            MintBuilder mintBuilder = new MintBuilder();
-            candySeller.makeJellyBellyMint(mintBuilder);
-            return mintBuilder.getProduct();
-        } else {
-            return null;
+    public Candy sellCandy(String type) {
+        switch (type){
+            case "lollipop":
+                LollipopBuilder lollipopJellyBuilder = new LollipopBuilder();
+                candySeller.makeJellyBellyLollipop(lollipopJellyBuilder);
+                return lollipopJellyBuilder.getProduct();
+            case "mint":
+                MintBuilder mintJellyBuilder = new MintBuilder();
+                candySeller.makeJellyBellyMint(mintJellyBuilder);
+                return mintJellyBuilder.getProduct();
+            case "jellyBelly":
+                JellyBeansBuilder jellyBeansJellyBuilder = new JellyBeansBuilder();
+                candySeller.makeJellyBellyJellyBeans(jellyBeansJellyBuilder);
+                return jellyBeansJellyBuilder.getProduct();
+            case "sourJelly":
+                SourJellyBuilder sourJellyJellyBellyBuilder = new SourJellyBuilder();
+                candySeller.makeJellyBellySourJelly(sourJellyJellyBellyBuilder);
+                return sourJellyJellyBellyBuilder.getProduct();
+            default:
+                return null;
         }
-
     }
 }
