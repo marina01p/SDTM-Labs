@@ -84,6 +84,18 @@ define.interpret(searchProduct) \\ returns true||false
 ```
 ## Results
 
+For an user friendly display, I've created an additional in my switch statement.
+If the client input of a product or factory is true, it displays its availability:
+
+
+![alt text](https://github.com/marina01p/SDTM-Labs/blob/main/Lab%233/screenshots/screenshot1.png)
+
+
+On the other hand, if the product or factory are inexistent, it displays its unavailability:
+
+
+![alt text](https://github.com/marina01p/SDTM-Labs/blob/main/Lab%233/screenshots/screenshot2.png)
+
 
 ## Status
 This project is finished.
