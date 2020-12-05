@@ -88,14 +88,14 @@ Chain of responsibility pattern is used to achieve loose coupling in software de
 Later, the object in the chain will decide themselves who will be processing the request and whether the request is required to be sent to the next object in the chain or not.
 
 In order to implement it into my candy store, I've created and abstract class *Handler* (chain_of_responsibilities.Handler) with a Handler successor.
-    protected Handler successor;
-    
 ```
+protected Handler successor;
+    
 public void setSuccessor(Handler successor) {
         this.successor = successor;
     }
 ```
-Then, I've created a public class, called *Request* (and a public enum *RequestType* where I've stored the commands for every successor) which sets getters to amount of reviews and type.
+Then, I've created a public class, called *Request* (and a public enum *RequestType* where I've stored the commands for every successor (GOOD_REVIEW, BAD_REVIEW)) which sets getters to amount of reviews and type.
     
     ```
     public Request(RequestType requestType, int amount) {
@@ -104,6 +104,29 @@ Then, I've created a public class, called *Request* (and a public enum *RequestT
     }
     ```
 Also, I created 2 classes which extends Handle and represent career positions (*Director.java* which deals with good reviews and *VP.java* which deals with bad review and pretentious clients, because has more experience).
+
+Director:
+```
+    public void handleRequest(Request request) {
+        if(request.getRequestType() == RequestType.GOOD_REVIEW) {
+            System.out.println("Director received your good review");
+        }
+        else {
+            successor.handleRequest(request);
+        }
+    }
+```
+VP:
+```
+    public void handleRequest(Request request) {
+        if(request.getRequestType() == RequestType.BAD_REVIEW) {
+            if(request.getAmount() < 3) {
+                System.out.println("VP received your bad review!");
+
+            }
+        }
+    }
+```
 
 ## Results
 
@@ -127,6 +150,13 @@ On the other hand, if the product or factory are nonexistent, it displays its un
 If a user rates with stars between range of [3-5], we get a response from our director:
 
 
+
+![alt text](https://github.com/marina01p/SDTM-Labs/blob/main/Lab%233/screenshots/screenshot3.png)
+
+
 If a user rates with stars between range of [3-5], we get a response from our VP:
+
+
+![alt text](https://github.com/marina01p/SDTM-Labs/blob/main/Lab%233/screenshots/screenshot4.png)
 ## Status
 This project is finished.
