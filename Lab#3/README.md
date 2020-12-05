@@ -105,6 +105,29 @@ Then, I've created a public class, called *Request* (and a public enum *RequestT
     ```
 Also, I created 2 classes which extends Handle and represent career positions (*Director.java* which deals with good reviews and *VP.java* which deals with bad review and pretentious clients, because has more experience).
 
+Director:
+```
+    public void handleRequest(Request request) {
+        if(request.getRequestType() == RequestType.GOOD_REVIEW) {
+            System.out.println("Director received your good review");
+        }
+        else {
+            successor.handleRequest(request);
+        }
+    }
+```
+VP:
+```
+    public void handleRequest(Request request) {
+        if(request.getRequestType() == RequestType.BAD_REVIEW) {
+            if(request.getAmount() < 3) {
+                System.out.println("VP received your bad review!");
+
+            }
+        }
+    }
+```
+
 ## Results
 
 For a user-friendly display, I've created two additional cases in my switch statement ('f' for search bar and 'o' for leaving a review).
