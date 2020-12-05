@@ -3,9 +3,9 @@ package chain_of_responsibility;
 public class Request {
 
     private RequestType requestType;
-    private double amount;
+    private int amount;
 
-    public Request(RequestType requestType, double amount) {
+    public Request(RequestType requestType, int amount) {
         this.requestType = requestType;
         this.amount = amount;
     }
@@ -14,7 +14,7 @@ public class Request {
         return requestType;
     }
 
-    public double getAmount() {
+    public int getAmount() {
         return amount;
     }
 }

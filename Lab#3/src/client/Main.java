@@ -56,7 +56,8 @@ public class Main {
                     "\n- f - : search for a product" +
                     "\n- r - : view regular products" +
                     "\n- s - : view special products" +
-                    "\n- e - : quite. ");
+                    "\n- e - : quite" +
+                    "\n- o - : rate our store");
             System.out.println(DOUBLE_DELIMITER);
 
             String rsq = rsqLine.readLine();
@@ -301,7 +302,11 @@ public class Main {
                     break;
 
                 case "o":
-
+                    System.out.println(DOUBLE_DELIMITER);
+                    System.out.println("          - RATE US -");
+                    System.out.println("please leave the number of stars");
+                    System.out.println("       within range [1-5]");
+                    System.out.println(DOUBLE_DELIMITER);
                     BufferedReader reviewLine = new BufferedReader(new InputStreamReader(System.in));
                     String review = reviewLine.readLine();
 
@@ -314,17 +319,17 @@ public class Main {
                         case "5":
                         case "4":
                         case "3":
-
-                            Request request = new Request(RequestType.CONFERENCE, 5);
+                            System.out.println(DOUBLE_DELIMITER);
+                            Request request = new Request(RequestType.GOOD_REVIEW, 5);
                             bill.handleRequest(request);
                             break;
                         case "2":
                         case "1":
-                            request = new Request(RequestType.PURCHASE, 1);
+                            request = new Request(RequestType.BAD_REVIEW, 2);
                             bill.handleRequest(request);
                             break;
                         default:
-                            System.out.println("Wrong number of stars. Try again!");
+                            System.out.println(ANSI_RED + "Wrong number of stars. Try again!" + ANSI_RESET);
                     }
 
                     break;

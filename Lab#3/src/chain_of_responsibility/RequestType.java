@@ -1,5 +1,5 @@
 package chain_of_responsibility;
 
 public enum RequestType {
-    CONFERENCE, PURCHASE;
+    GOOD_REVIEW, BAD_REVIEW;
 }
