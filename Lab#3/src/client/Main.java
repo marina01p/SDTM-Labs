@@ -1,6 +1,10 @@
 package client;
 
 import adapter.PacketAdapter;
+import chain_of_responsibility.Director;
+import chain_of_responsibility.Request;
+import chain_of_responsibility.RequestType;
+import chain_of_responsibility.VP;
 import domain.packet.GiftBox;
 import domain.packet.PlasticBag;
 import facade.CandyFacade;
@@ -295,8 +299,39 @@ public class Main {
                     System.out.println(DOUBLE_DELIMITER);
                     System.exit(0);
                     break;
+
+                case "o":
+
+                    BufferedReader reviewLine = new BufferedReader(new InputStreamReader(System.in));
+                    String review = reviewLine.readLine();
+
+                    Director bill = new Director();
+                    VP annie = new VP();
+
+                    bill.setSuccessor(annie);
+
+                    switch (review) {
+                        case "5":
+                        case "4":
+                        case "3":
+
+                            Request request = new Request(RequestType.CONFERENCE, 5);
+                            bill.handleRequest(request);
+                            break;
+                        case "2":
+                        case "1":
+                            request = new Request(RequestType.PURCHASE, 1);
+                            bill.handleRequest(request);
+                            break;
+                        default:
+                            System.out.println("Wrong number of stars. Try again!");
+                    }
+
+                    break;
                 default:
                     System.out.println(ANSI_RED + "Invalid command. Try again!" + ANSI_RESET);
+
+
             }
 
         }
