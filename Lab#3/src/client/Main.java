@@ -71,8 +71,10 @@ public class Main {
                     System.out.println("           SEARCH BAR           ");
                     System.out.println("search for a product or factory:");
                     System.out.println(DOUBLE_DELIMITER);
+
                     String searchProduct = searchLine.readLine();
                     Expression define = buildInterpreterTree();
+
                     switch (searchProduct.toLowerCase().replaceAll("\\s", "")) {
                         case "mint":
                         case "sourjelly":
@@ -94,7 +96,6 @@ public class Main {
                                 System.out.println(ANSI_RED + "Not Available, sorry!" + ANSI_RESET);
                             }
                         default:
-                            System.out.println(ANSI_RED + "Not Available, sorry!" + ANSI_RESET);
                     }
 
                     break;

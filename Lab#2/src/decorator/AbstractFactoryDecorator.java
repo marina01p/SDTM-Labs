@@ -7,7 +7,7 @@ public class AbstractFactoryDecorator implements AbstractFactory {
 
     protected AbstractFactory decorator;
 
-    public AbstractFactoryDecorator(AbstractFactory abstractFactory){
+    public AbstractFactoryDecorator(AbstractFactory abstractFactory) {
         this.decorator = abstractFactory;
     }
 

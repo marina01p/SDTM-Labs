@@ -14,8 +14,8 @@ public class CandyFacade {
         this.candyFactory = abstractFactory;
     }
 
-    public Candy getCandy(String type, String customColor, String manufacturer) {
-        AbstractFactoryDecorator customizer = new FlavourDecorator(candyFactory, customColor);
+    public Candy getCandy(String type, String customFlavour, String manufacturer) {
+        AbstractFactoryDecorator customizer = new FlavourDecorator(candyFactory, customFlavour);
         Candy customCandy = customizer.sellCandy(type);
         customCandy.setManufacturer(manufacturer);
         return customCandy;
